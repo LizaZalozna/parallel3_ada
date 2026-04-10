@@ -1,0 +1,1 @@
+hello_app.adb:7:11: warning: file name does not match unit name, should be "main.adb" [enabled by default]

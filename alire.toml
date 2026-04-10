@@ -1,0 +1,11 @@
+name = "hello_app"
+description = ""
+version = "0.1.0-dev"
+
+authors = ["Liza Zalozna"]
+maintainers = ["Liza Zalozna <example@example.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = []
+
+executables = ["hello_app"]
