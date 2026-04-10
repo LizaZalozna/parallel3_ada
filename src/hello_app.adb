@@ -4,6 +4,8 @@ use Ada.Text_IO, Ada.Integer_Text_IO, GNAT.Semaphores;
 with Ada.Containers.Indefinite_Doubly_Linked_Lists;
 use Ada.Containers;
 
+with Ada.Unchecked_Deallocation;
+
 procedure Main is
 
    package String_Lists is new Indefinite_Doubly_Linked_Lists (String);
@@ -29,6 +31,12 @@ procedure Main is
 
       type Producer_Task_Access is access Producer;
       type Consumer_Task_Access is access Consumer;
+
+      procedure Free_Producer is new
+        Ada.Unchecked_Deallocation (Producer, Producer_Task_Access);
+
+      procedure Free_Consumer is new
+        Ada.Unchecked_Deallocation (Consumer, Consumer_Task_Access);
 
       task body Producer is
       begin
@@ -60,7 +68,7 @@ procedure Main is
             declare
                Item : String := First_Element (Storage);
             begin
-               Put_Line ("Took " & Integer'Image (Integer (Storage.Length)));
+               Put_Line ("Took " & Item);
             end;
 
             Storage.Delete_First;
@@ -109,6 +117,14 @@ procedure Main is
 
             Consumers (I) := new Consumer (Count_Of_Consumed_Items_For_Thread);
          end;
+      end loop;
+
+      for I in Producers'Range loop
+         Free_Producer (Producers (I));
+      end loop;
+
+      for I in Consumers'Range loop
+         Free_Consumer (Consumers (I));
       end loop;
 
    end Starter;
