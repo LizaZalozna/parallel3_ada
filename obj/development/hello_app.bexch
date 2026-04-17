@@ -1,19 +1,19 @@
 [GENERATED OBJECT FILE]
 b__hello_app.o
 [PROJECT FILES]
-/Users/lizazalozna/ada/lab_3/hello_app.gpr
-20260319133619 d3dfb1501c7b8044044467e5e16baa33
-/Users/lizazalozna/ada/lab_3/config/hello_app_config.gpr
-20260319132101 b14d930752e783608ccd50b14d3829e0
+/Users/lizazalozna/ada/lab_4/hello_app.gpr
+20260319133619 29395a0cdfb32086a7b893ddd7bab0b2
+/Users/lizazalozna/ada/lab_4/config/hello_app_config.gpr
+20260319132101 b89193ee3c7397b0c6e364532ddfa7f1
 [BOUND OBJECT FILES]
-/Users/lizazalozna/ada/lab_3/obj/development/hello_app.o
+/Users/lizazalozna/ada/lab_4/obj/development/hello_app.o
 [GENERATED SOURCE FILES]
 b__hello_app.ads
 b__hello_app.adb
 b__hello_app.ali
 [RESULTING OPTIONS]
--L/Users/lizazalozna/ada/lab_3/obj/development/
--L/Users/lizazalozna/ada/lab_3/obj/development/
+-L/Users/lizazalozna/ada/lab_4/obj/development/
+-L/Users/lizazalozna/ada/lab_4/obj/development/
 -L/users/lizazalozna/.local/share/alire/toolchains/gnat_native_15.1.2_60748c54/lib/gcc/aarch64-apple-darwin23.6.0/15.0.1/adalib/
 -static
 /users/lizazalozna/.local/share/alire/toolchains/gnat_native_15.1.2_60748c54/lib/gcc/aarch64-apple-darwin23.6.0/15.0.1/adalib/libgnarl.a
